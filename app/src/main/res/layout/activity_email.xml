@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/status_text"
+    tools:context=".MyActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/login_div"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:layout_margin="15dip"
+            >
+
+
+            <TextView
+                android:id="@+id/email_receive_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/share_text"
+                android:text="收件人:"
+                />
+            <EditText
+                android:id="@+id/email_receive_people_value"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="464479297@qq.com"
+                android:layout_below="@id/email_receive_people"
+                android:textColor="@color/share_text"
+                android:password="false"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:id="@+id/email_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_receive_people_value"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/share_text"
+                android:text="主题："
+                />
+            <TextView
+                android:id="@+id/email_main_value"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/share_text"
+                android:text="TEST！"
+                android:gravity="center"
+                android:layout_below="@id/email_main"
+                android:singleLine="true"
+                />
+            <TextView
+                android:id="@+id/email_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_main_value"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/share_text"
+                android:text="主体："
+                />
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/email_body"
+                android:scrollbars="vertical"
+                android:id="@+id/scrollView"
+                android:layout_above="@+id/email_send">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_order_start"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/email_body_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/qianming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_order_start"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        />
+                </RelativeLayout>
+            </ScrollView>
+
+            <Button
+                android:layout_alignParentBottom="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/email_send"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/share_text"
+                android:text="发送"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
